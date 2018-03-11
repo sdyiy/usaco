@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-const int DBG=1;
+#ifdef DEBUG 
+#define DBG_PRINT(fmt, args...) fprintf(stderr,fmt, ##args)
+#else
+#define DBG_PRINT(fmt, args...) /* Do nothing */
+#endif
+
 struct board {
     int x1, y1, x2, y2;
 };
@@ -47,11 +52,9 @@ int main() {
         size=yy*(lawn.x2-lawn.x1);
     else 
         size=0;
-    if (DBG) {
-        print_board(lawn);
-        print_board(cow);
-        printf("xx=%d yy=%d size=%d\n",xx,yy,size);
-    }
+    print_board(lawn);
+    print_board(cow);
+    DBG_PRINT("xx=%d yy=%d size=%d\n",xx,yy,size);
     fprintf(fpout,"%d\n",size);
     fclose(fpout);
     return 0;

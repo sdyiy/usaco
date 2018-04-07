@@ -26,6 +26,29 @@ int main() {
     DBG_PRINT("%d\n", cowLine[j]);
   }
   
+  int cowLineSort[numberOfCows];
+
+  for (j = 0; j < numberOfCows; j++)
+    cowLineSort[j] = cowLine[j];
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   //for loop starts at 1 because first element doesn't need to be checked
   
@@ -34,7 +57,7 @@ int main() {
       if (i == 0){
 	wrongCowIndex = 0;
 	break;
-      } else /*if (cowLine[i] <= cowLine[i-1])*/{
+      } else //if (cowLine[i] <= cowLine[i-1]){
       wrongCowIndex = i;
       break;
       }   
@@ -105,3 +128,15 @@ int main() {
   return 0;
 }
 
+int bubbleSort (int *array, int elements){
+  int x, y;
+  for (int j = 0; j< elements-1; j++){
+    if (array[j] > array[j+1]){
+      x = array[j];
+      y = array[j+1];
+      
+      array[j] = y;
+      array[j+1] = x;
+    }
+  }
+}

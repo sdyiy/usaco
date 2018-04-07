@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h> //abs value
 #ifdef DEBUG 
 #define DBG_PRINT(fmt, args...) fprintf(stderr,fmt, ##args)
 #else

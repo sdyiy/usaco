@@ -1,7 +1,7 @@
 #include <stdio.h>
-
+#include <stdlib.h> //abs value
 #ifdef DEBUG 
-#define DBG_PRINT(fmt, args...) fprintf(stderr,fmt, ##args)
+#define DBG_PRINT(fmt, args...) printf(fmt, ##args)
 #else
 #define DBG_PRINT(fmt, args...) /* Do nothing */
 #endif

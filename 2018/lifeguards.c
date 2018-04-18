@@ -18,7 +18,7 @@ int main() {
     }
     
     int schedule[1000];
-    int timeCheck, timeCovered, totalLifeguards, i, j, k;
+    int timeCheck, timeCovered=0, totalLifeguards, i, j, k;
     fscanf(fpin, "%d", &totalLifeguards);
     for (i = 0; i < 1000; i++){
       schedule[i] = 0;
